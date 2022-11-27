@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+
+  <body onload="fetchDocs()">
+    <form action="http://localhost:8080/upload" method="post" enctype="multipart/form-data" >
+
+      <div id="home">
+        <div id="page_name">
+          IBM Cloudant File Upload Page
+        </div>
+      </div>    
+    <!-- Upload Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <span class="introduction">Upload a file</span>          
+          <input id="fileupload" type="file" name="fileupload">
+            <input type="submit" id="submit_btn"/>
+        </fieldset>
+      </div>
+    </section>
+
+    <div id="existing_content">
+
+    </div>
+
+    </form>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Navigation Bar */
+
+#home {
+  background-color: darkslateblue;
+  padding-bottom: 1cm;
+  margin-left:-1cm;
+  margin-right:-1cm;
+  margin-top:-1cm;
+  padding-top: 2cm;
+  padding-bottom: 2cm;
+  height: 5mm;
+  
+ }
+
+#page_name {
+  font-size: 30px;
+  color: white;
+  float: left;
+  padding-left: 2cm;
+}
+
+
+.introduction {
+  text-align: justify;
+  font-size: 20px;
+  color: #7600bc;
+  margin: 30px;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  text-align: center;
+  width: 2in;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+  border:1px solid gray;
+  font-size: 18px;
+}
+
+
+#submit_btn {
+  text-align: center;
+  width: 2in;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+  border:1px solid gray;
+  font-size: 18px;
+}
+
+#existing_content a{
+  color: black;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  font-family: 'Times New Roman', Times, serif;
+}
+fieldset {
+  display: flexbox;
+  align-content: center;
+  justify-content: center;  
+  padding: 25px; 
+  margin-left: 50px; 
+  margin-right: 50px;   
+  border: thin solid white;
+  width: 50%;
+}
+
