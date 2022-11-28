@@ -9,20 +9,19 @@ function fetchDocs() {
     let objArrStr = Http.response;
     let objArr = JSON.parse(objArrStr);
     
-    let text = "";
+    let text = "<table>";
 
     objArr.forEach((docItem)=>{
-      text += "<br/>";
       let attachmentName;
       if(docItem.doc._attachments) {
         let attachments = Object.keys(docItem.doc._attachments);
         attachmentName = attachments[0];
-        text += "<a target='_blank' href='/getdoc/"+attachmentName+"/"+docItem.id+"' >"+attachmentName+"</a>";
-        let thisDelText = "<img src='trashcan.png' style='width:30px;margin-left:20px;' onClick=\"deleteAttachement(\'"+attachmentName+"/"+docItem.id+"\')\""+"/>";
+        text += "<tr><td><a target='_blank' href='/getdoc/"+attachmentName+"/"+docItem.id+"' >"+attachmentName+"</a></td>";
+        let thisDelText = "<td><img src='trashcan.png' style='width:30px;margin-left:20px;' onClick=\"deleteAttachement(\'"+attachmentName+"/"+docItem.id+"\')\""+"/></td></tr>";
         text += thisDelText;
-        text += "<br/>";
         } 
     });
+    text += "</table>";
     
     document.getElementById("existing_content").innerHTML = text;
   }}
