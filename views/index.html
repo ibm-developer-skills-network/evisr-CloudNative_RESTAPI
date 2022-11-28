@@ -7,7 +7,7 @@
   </head>
 
   <body onload="fetchDocs()">
-    <form action="http://localhost:8080/upload" method="post" enctype="multipart/form-data" >
+    <form action="./upload" method="post" enctype="multipart/form-data" >
 
       <div id="home">
         <div id="page_name">
@@ -19,7 +19,7 @@
       <div class="flex_center">
         <fieldset>
           <span class="introduction">Upload a file</span>          
-          <input id="fileupload" type="file" name="fileupload">
+          <input id="fileupload" type="file" name="fileupload" accept="image/png, image/jpeg,.doc,.docx,.pdf">
             <input type="submit" id="submit_btn"/>
         </fieldset>
       </div>
