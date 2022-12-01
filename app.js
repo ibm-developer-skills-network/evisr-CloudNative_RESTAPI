@@ -34,7 +34,7 @@ service.setServiceUrl(process.env.url);
 }
 app.get("/allDocs",(req,res)=>{
   service.postAllDocs({
-    db: 'products',
+    db: 'my_sample_db',
     includeDocs: true,
     limit: 25
   }).then(response => {
@@ -44,7 +44,7 @@ app.get("/allDocs",(req,res)=>{
 
 app.get("/getdoc/:attachmentName/:docId",(req,res)=>{
   service.getAttachment({
-    db: 'products',
+    db: 'my_sample_db',
     docId: req.params.docId,
     attachmentName: req.params.attachmentName
   }).then(response => {
@@ -55,11 +55,11 @@ app.get("/getdoc/:attachmentName/:docId",(req,res)=>{
 
 app.post("/delete/:attachmentName/:docId",(req,res)=>{
   service.getDocument({
-    db: 'products',
+    db: 'my_sample_db',
     docId: req.params.docId
   }).then(response => {
     service.deleteDocument({
-      db: 'products',
+      db: 'my_sample_db',
       docId: req.params.docId,
       rev: response.result._rev
     }).then(()=>{
@@ -87,7 +87,7 @@ app.post("/upload",(req,res)=>{
     readableStream.on('end', () => {
     stream.push(null);
     service.putAttachment({
-      db: 'products',
+      db: 'my_sample_db',
       docId: uuid()+":"+randomInt(100),
       attachmentName: origname,
       attachment: stream,
